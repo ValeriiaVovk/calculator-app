@@ -1,0 +1,327 @@
+:root {
+  background: #3a4663;
+}
+:root .header__name,
+:root .header__theme p,
+:root .header__theme-wrap label,
+:root main .result__show {
+  color: #fff;
+}
+:root .header__theme-wrap {
+  background-color: #242d44;
+}
+:root .header__theme-wrap input:checked {
+  background-color: #d03f2f;
+}
+:root main .result {
+  background: #181f33;
+}
+:root main .keyboard {
+  background: #242d44;
+}
+:root main .keyboard .btn {
+  box-shadow: inset 0 -4px 0 0 #b3a497;
+  background: #eae3dc;
+  color: #434a59;
+}
+:root main .keyboard .del,
+:root main .keyboard .reset {
+  box-shadow: inset 0 -4px 0 0 #414e73;
+  background: #647198;
+  color: #fff;
+}
+:root main .keyboard .equal {
+  box-shadow: inset 0 -4px 0 0 #93261a;
+  background: #d03f2f;
+  color: #fff;
+}
+
+body.second-theme {
+  background: #e6e6e6;
+}
+body.second-theme .header__name,
+body.second-theme .header__theme p,
+body.second-theme .header__theme-wrap label,
+body.second-theme main .result__show {
+  color: #36362c;
+}
+body.second-theme .header__theme-wrap {
+  background-color: #d2cdcd;
+}
+body.second-theme .header__theme-wrap input:checked {
+  background-color: #c85402;
+}
+body.second-theme main .result {
+  background: #eee;
+}
+body.second-theme main .keyboard {
+  background: #d2cdcd;
+}
+body.second-theme main .keyboard .btn {
+  box-shadow: inset 0 -4px 0 0 #a79e91;
+  background: #e5e4e1;
+  color: #36362c;
+}
+body.second-theme main .keyboard .del,
+body.second-theme main .keyboard .reset {
+  box-shadow: inset 0 -4px 0 0 #1b6066;
+  background: #378187;
+  color: #fff;
+}
+body.second-theme main .keyboard .equal {
+  box-shadow: inset 0 -4px 0 0 #873901;
+  background: #c85402;
+  color: #fff;
+}
+
+body.third-theme {
+  background: #17062a;
+}
+body.third-theme .header__name,
+body.third-theme .header__theme p,
+body.third-theme .header__theme-wrap label,
+body.third-theme main .result__show {
+  color: #ffe53d;
+}
+body.third-theme .header__theme-wrap {
+  background-color: #1e0936;
+}
+body.third-theme .header__theme-wrap input:checked {
+  background-color: #00ded0;
+}
+body.third-theme main .result {
+  background: #1e0936;
+}
+body.third-theme main .keyboard {
+  background: #1e0936;
+}
+body.third-theme main .keyboard .btn {
+  box-shadow: inset 0 -4px 0 0 #881c9e;
+  background: #331c4d;
+  color: #ffe53d;
+}
+body.third-theme main .keyboard .del,
+body.third-theme main .keyboard .reset {
+  box-shadow: inset 0 -4px 0 0 #be15f4;
+  background: #56077c;
+  color: #fff;
+}
+body.third-theme main .keyboard .equal {
+  box-shadow: inset 0 -4px 0 0 #6cf9f1;
+  background: #00ded0;
+  color: #1a2327;
+}
+
+body,
+h1,
+h2,
+button,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  font-family: "League Spartan", sans-serif;
+}
+
+button {
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.header {
+  max-width: 540px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.header__name {
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.header__theme {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.header__theme p {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.header__theme-wrap {
+  position: relative;
+  border-radius: 13px;
+  width: 71px;
+  height: 26px;
+}
+.header__theme-wrap label {
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  position: absolute;
+  top: -18px;
+  left: 0;
+}
+.header__theme-wrap label[for=style1] {
+  left: 8px;
+}
+.header__theme-wrap label[for=style2] {
+  left: 31px;
+}
+.header__theme-wrap label[for=style3] {
+  left: 54px;
+}
+.header__theme-wrap input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  top: 2px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.header__theme-wrap [id=style1] {
+  left: 2px;
+}
+.header__theme-wrap [id=style2] {
+  left: 22px;
+}
+.header__theme-wrap [id=style3] {
+  right: 5px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 540px;
+  width: 100%;
+}
+main .result {
+  max-height: 128px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  overflow-x: hidden;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+main .result__show {
+  font-weight: 700;
+  font-size: 56px;
+  letter-spacing: -0.02em;
+  text-align: right;
+  padding-top: 40px;
+  padding-bottom: 36px;
+}
+main .keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 32px 31px;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  row-gap: 24px;
+}
+main .keyboard .btn {
+  width: 100px;
+  height: 64px;
+  border-radius: 10px;
+}
+main .keyboard .del {
+  border-radius: 10px;
+  width: 101px;
+  height: 64px;
+}
+main .keyboard .reset {
+  border-radius: 10px;
+  width: 226px;
+  height: 64px;
+}
+main .keyboard .equal {
+  border-radius: 10px;
+  width: 226px;
+  height: 64px;
+}
+
+@media (max-width: 550px) {
+  .container {
+    max-width: 327px;
+  }
+  .header {
+    max-width: 327px;
+  }
+  main {
+    max-width: 327px;
+  }
+  main .result {
+    max-height: 88px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  main .result__show {
+    font-size: 40px;
+    padding-top: 29px;
+    padding-bottom: 22px;
+  }
+  main .keyboard {
+    padding: 24px 24px;
+    -moz-column-gap: 13px;
+         column-gap: 13px;
+    row-gap: 13px;
+  }
+  main .keyboard .btn {
+    width: 60px;
+    border-radius: 5px;
+  }
+  main .keyboard .del {
+    border-radius: 5px;
+    width: 60px;
+    font-size: 20px;
+  }
+  main .keyboard .reset {
+    border-radius: 5px;
+    width: 133px;
+    font-size: 20px;
+  }
+  main .keyboard .equal {
+    border-radius: 5px;
+    width: 133px;
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=styles.css.map */

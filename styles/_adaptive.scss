@@ -1,0 +1,54 @@
+@media (max-width: 550px) {
+    .container {
+        max-width: 327px;
+    }
+
+    .header {
+        max-width: 327px;
+    }
+    
+    main {
+        max-width: 327px;
+    
+        .result {
+            max-height: 88px;
+            padding-left: 24px;
+            padding-right: 24px;
+    
+            &__show {
+                font-size: 40px;
+                padding-top: 29px;
+                padding-bottom: 22px;
+            }
+        }
+    
+        .keyboard {
+            padding: 24px 24px;
+            column-gap: 13px;
+            row-gap: 13px;
+    
+            .btn {
+                width: 60px;
+                border-radius: 5px;
+            }
+    
+            .del {
+                border-radius: 5px;
+                width: 60px;
+                font-size: 20px;
+            }
+    
+            .reset {
+                border-radius: 5px;
+                width: 133px;
+                font-size: 20px;
+            }
+    
+            .equal {
+                border-radius: 5px;
+                width: 133px;
+                font-size: 20px;
+            }
+        }
+    }
+}
