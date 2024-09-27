@@ -1,0 +1,140 @@
+.header {
+    max-width: 540px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &__name {
+        font-weight: 700;
+        font-size: 32px;
+        letter-spacing: -0.02em;
+        text-align: center;
+    }
+
+    &__theme {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+
+        p {
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        &-wrap {
+            position: relative;
+            border-radius: 13px;
+            width: 71px;
+            height: 26px;
+
+            label {
+                font-family: "Spartan", sans-serif;
+                font-weight: 700;
+                font-size: 12px;
+                text-align: center;
+                position: absolute;
+                top: -18px;
+                left: 0;
+            }
+
+           label[for="style1"] {
+            left: 8px;
+           }
+
+           label[for="style2"] {
+            left: 31px;
+           }
+
+           label[for="style3"] {
+            left: 54px;
+           }
+
+           input {
+            appearance: none;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            top: 2px;
+            transition: 0.5s;
+            cursor: pointer;
+           }
+
+           [id="style1"] {
+            left: 2px;
+           }
+
+           [id="style2"] {
+            left: 22px;
+           }
+
+           [id="style3"] {
+            right: 5px;
+           }
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 540px;
+    width: 100%;
+
+
+    .result {
+        max-height: 128px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: flex-end;
+        overflow-x: hidden;
+        padding-left: 32px;
+        padding-right: 32px;
+
+        &__show {
+            font-weight: 700;
+            font-size: 56px;
+            letter-spacing: -0.02em;
+            text-align: right;
+            padding-top: 40px;
+            padding-bottom: 36px;
+        }
+    }
+
+    .keyboard {
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        padding: 32px 31px;
+        column-gap: 25px;
+        row-gap: 24px;
+
+        .btn {
+            width: 100px;
+            height: 64px;
+            border-radius: 10px;
+        }
+
+        .del {
+            border-radius: 10px;
+            width: 101px;
+            height: 64px;
+        }
+
+        .reset {
+            border-radius: 10px;
+            width: 226px;
+            height: 64px;
+        }
+
+        .equal {
+            border-radius: 10px;
+            width: 226px;
+            height: 64px;
+        }
+    }
+}

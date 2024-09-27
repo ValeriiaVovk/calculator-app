@@ -1,0 +1,160 @@
+// style1
+$background-color-first: #3a4663;
+$text-color-first: #fff;
+$switch-theme-color-first: #242d44;
+$input-color-first: #d03f2f;
+$result-bg-first: #181f33;
+$calc-bg-first: #242d44;
+$btn-bg-first: #eae3dc;
+$btn-bg-shadow-first: #b3a497;
+$btn-color-first: #434a59;
+$del-reset-color-first: #647198;
+$del-reset-shadow-first: #414e73;
+$del-reset-text-first: #fff;
+$equal-color-first: #d03f2f;
+$equal-shadow-first: #93261a;
+$equal-text-first: #fff;
+
+// style2
+$background-color-second: #e6e6e6;
+$text-color-second: #36362c;
+$switch-theme-color-second: #d2cdcd;
+$input-color-second: #c85402;
+$result-bg-second: #eee;
+$calc-bg-second: #d2cdcd;
+$btn-bg-second: #e5e4e1;
+$btn-bg-shadow-second: #a79e91;
+$btn-color-second: #36362c;
+$del-reset-color-second: #378187;
+$del-reset-shadow-second: #1b6066;
+$del-reset-text-second: #fff;
+$equal-color-second: #c85402;
+$equal-shadow-second: #873901;
+$equal-text-second: #fff;
+
+// style3
+$background-color-third: #17062a;
+$text-color-third: #ffe53d;
+$switch-theme-color-third:  #1e0936;
+$input-color-third: #00ded0;
+$result-bg-third: #1e0936;
+$calc-bg-third: #1e0936;
+$btn-bg-third: #331c4d;
+$btn-bg-shadow-third: #881c9e;
+$btn-color-third: #ffe53d;
+$del-reset-color-third: #56077c;
+$del-reset-shadow-third: #be15f4;
+$del-reset-text-third: #fff;
+$equal-color-third:  #00ded0;
+$equal-shadow-third: #6cf9f1;
+$equal-text-third: #1a2327;
+
+
+
+@mixin theme($background-color, $text-color, $switch-theme-color, $input-color, $result-bg, $calc-bg, $btn-bg, $btn-bg-shadow, $btn-color, $del-reset-color, $del-reset-shadow, $del-reset-text, $equal-color, $equal-shadow, $equal-text) {
+    
+    background: $background-color;
+
+    .header__name, 
+    .header__theme p,
+    .header__theme-wrap label,
+    main .result__show  {
+        color: $text-color;
+    }
+
+    .header__theme-wrap {
+        background-color:  $switch-theme-color;
+    }
+
+    .header__theme-wrap input:checked {
+        background-color: $input-color;
+    }
+    
+    main .result {
+        background: $result-bg;
+    }
+
+    main .keyboard {
+        background: $calc-bg;
+    }
+
+    main .keyboard .btn {
+        box-shadow: inset 0 -4px 0 0 $btn-bg-shadow;
+        background: $btn-bg;
+        color: $btn-color;
+    }
+
+    main .keyboard .del,
+    main .keyboard .reset {
+        box-shadow: inset 0 -4px 0 0 $del-reset-shadow;
+        background: $del-reset-color;
+        color: $del-reset-text;
+    }
+
+    main .keyboard .equal {
+        box-shadow: inset 0 -4px 0 0 $equal-shadow;
+        background: $equal-color;
+        color: $equal-text;
+    }
+}
+
+
+:root {
+    @include theme(
+        $background-color-first,
+        $text-color-first,
+        $switch-theme-color-first,
+        $input-color-first,
+        $result-bg-first,
+        $calc-bg-first,
+        $btn-bg-first,
+        $btn-bg-shadow-first,
+        $btn-color-first,
+        $del-reset-color-first,
+        $del-reset-shadow-first,
+        $del-reset-text-first,
+        $equal-color-first,
+        $equal-shadow-first,
+        $equal-text-first,
+    );
+}
+
+body.second-theme {
+    @include theme(
+        $background-color-second,
+        $text-color-second,
+        $switch-theme-color-second,
+        $input-color-second,
+        $result-bg-second,
+        $calc-bg-second,
+        $btn-bg-second,
+        $btn-bg-shadow-second,
+        $btn-color-second,
+        $del-reset-color-second,
+        $del-reset-shadow-second,
+        $del-reset-text-second,
+        $equal-color-second,
+        $equal-shadow-second,
+        $equal-text-second,
+    );
+}
+
+body.third-theme {
+    @include theme(
+        $background-color-third,
+        $text-color-third,
+        $switch-theme-color-third,
+        $input-color-third,
+        $result-bg-third,
+        $calc-bg-third,
+        $btn-bg-third,
+        $btn-bg-shadow-third,
+        $btn-color-third,
+        $del-reset-color-third,
+        $del-reset-shadow-third,
+        $del-reset-text-third,
+        $equal-color-third,
+        $equal-shadow-third,
+        $equal-text-third,
+    );
+}
